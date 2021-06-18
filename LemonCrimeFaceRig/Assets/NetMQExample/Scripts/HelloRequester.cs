@@ -25,7 +25,6 @@ public class HelloRequester : RunAbleThread
             for (int i = 0; i < 60 && Running; i++)
 			//while(true)
             {
-                Debug.Log("Sending Hello");
                 client.SendFrame("Hello");
                 // ReceiveFrameString() blocks the thread until you receive the string, but TryReceiveFrameString()
                 // do not block the thread, you can try commenting one and see what the other does, try to reason why

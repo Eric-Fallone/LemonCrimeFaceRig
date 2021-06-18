@@ -15,6 +15,7 @@ MonoBehaviour:
   DebugPrint: 0
   IndexesOfLandMarks: 3000000036000000
   BlendtreeName: 
-  BlendValue: 0.5001785
-  min: 50
-  max: 90
+  BlendValue: 0.8689918
+  min: 32.01562
+  max: 70.11419
+  InitialCalibration: 0

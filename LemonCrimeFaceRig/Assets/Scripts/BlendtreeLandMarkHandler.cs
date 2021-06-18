@@ -14,6 +14,8 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 
 	public float min;
 	public float max;
+	[SerializeField]
+	private bool InitialCalibration = false;
 
 	public void OnEnable()
 	{
@@ -37,6 +39,35 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 			Debug.Log("Distance: " + distance + " Value: " + value);
 		}
 		BlendValue = Mathf.Clamp(value, 0, 1);
+	}
+
+	public void StartCalibrating()
+	{
+		InitialCalibration = true;
+	}
+
+	public void Calibrate(float x1, float y1, float x2, float y2)
+	{
+		float distance = Vector2.Distance(new Vector2(x1, y1), new Vector2(x2, y2));
+		Debug.Log(distance);
+		if (distance > max || InitialCalibration == true)
+		{
+			max = distance;
+		}
+		if (distance < min || InitialCalibration == true)
+		{
+			min = distance;
+		}
+
+		if (min == max)
+		{
+			max++;
+		}
+
+		if(InitialCalibration == true)
+		{
+			InitialCalibration = false;
+		}
 	}
 }
 

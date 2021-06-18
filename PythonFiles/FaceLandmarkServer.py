@@ -18,15 +18,13 @@ def GetFaceLandMarks():
     _, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = detector(gray)
-    output = [-1,0,0]
+    output =[]
+    #height = 
+    output.append([cap.get(3),cap.get(4)])
     for face in faces:
         
-        x1 = face.left()
-        x2 = face.top()
-        y1 = face.right()
-        y2 = face.bottom()
-        #cv2.rectangle(frame, (x1,x2), (y1,y2), (0,255,0),0)
-
+        midPoint = face.center()
+        output.append([-1,midPoint.x,midPoint.y])
         landmarks = predictor(gray, face)
         
         for n in range(0,68):
