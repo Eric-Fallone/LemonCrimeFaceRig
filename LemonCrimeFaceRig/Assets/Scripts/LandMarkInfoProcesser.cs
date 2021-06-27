@@ -16,7 +16,7 @@ public class LandMarkInfoProcesser : MonoBehaviour
 	public float webCamToScreenRation; 
 
 	public Vector2 FaceLocation;
-
+	public Vector2 FaceAngle;
 
 
 	[SerializeField]
@@ -77,6 +77,13 @@ public class LandMarkInfoProcesser : MonoBehaviour
 			LandMarks[index].y = float.Parse(splitLandMarks[i + 2]);
 			index++;
 		}
+		//set master angle position
+		// 27 top of nose
+		// 8 bottom on chin
+
+		float sign = (LandMarks[8].y < LandMarks[27].y) ? -1.0f : 1.0f;
+		FaceAngle = (LandMarks[8] - LandMarks[7]).normalized ;
+		//FaceAngle.Normalize();
 
 		if (isCalibrating == true)
 		{
