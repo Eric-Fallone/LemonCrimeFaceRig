@@ -40,7 +40,7 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 		Vector2 second = new Vector2(x2, y2);
 
 		float distance = Mathf.Clamp( Vector2.Distance(first, second), min, max );
-		float value = (distance ) / (max - min);
+		float value = (distance - min ) / (max - min);
 		if (DebugPrint)
 		{
 			Debug.Log("Distance: " + distance + " Value: " + value);

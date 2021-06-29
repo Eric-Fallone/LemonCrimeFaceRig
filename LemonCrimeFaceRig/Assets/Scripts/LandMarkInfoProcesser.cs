@@ -107,11 +107,19 @@ public class LandMarkInfoProcesser : MonoBehaviour
 
 	public void StartCalibration()
 	{
-		foreach (BlendtreeLandMarkHandler handler in LandMarkHandlers)
+		if(isCalibrating == true)
 		{
-			handler.StartCalibrating();
+			isCalibrating = false;
 		}
-		isCalibrating = true;
+		else
+		{
+			foreach (BlendtreeLandMarkHandler handler in LandMarkHandlers)
+			{
+				handler.StartCalibrating();
+			}
+			isCalibrating = true;
+		}
+
 	}
 
 	public void EndCalibration()
