@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
+  m_Name: Mouth Right 1
+  m_EditorClassIdentifier: 
+  DebugPrint: 0
+  IndexesOfLandMarks: 320000003a000000
+  BlendValue: 0.037248548
+  DeadBandMin: 0
+  DeadBandMax: 1
+  BlendValueAngle: 86.767456
+  min: 16.03122
+  max: 49.09175
+  InitialCalibration: 0
+  output: 0.037248548
+  isReversed: 0

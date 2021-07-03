@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Mouth Hieght Left
+  m_Name: Mouth Left 1
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 3f00000041000000
-  BlendtreeName: 
-  BlendValue: 0.0288615
-  min: 0
-  max: 49
+  IndexesOfLandMarks: 3400000041000000
+  BlendValue: 0.031031173
+  DeadBandMin: 0
+  DeadBandMax: 1
+  BlendValueAngle: 83.8845
+  min: 7.071068
+  max: 39.012817
   InitialCalibration: 0
-  blendConstrainerName: Left Lip Height
-  BlendContrainer: {fileID: 0}
+  output: 0.031031173
+  isReversed: 0

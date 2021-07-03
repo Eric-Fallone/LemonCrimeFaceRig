@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Right Eye Brow
+  m_Name: Right Eye
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 1500000027000000
-  BlendValue: 0.48813424
-  BlendValueAngle: 123.0131
-  min: 12.806249
-  max: 25.70992
+  IndexesOfLandMarks: 2c00000028000000
+  BlendValue: 0.59491885
+  DeadBandMin: 0.125
+  DeadBandMax: 0.7
+  BlendValueAngle: 164.81798
+  min: 57.00877
+  max: 62.008064
   InitialCalibration: 0
+  output: 0.8172502
+  isReversed: 1

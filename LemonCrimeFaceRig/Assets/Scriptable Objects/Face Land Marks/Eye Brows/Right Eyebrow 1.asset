@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Mouth Hieght Right
+  m_Name: Right Eyebrow 1
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 3d00000043000000
-  BlendtreeName: 
-  BlendValue: 0.020391185
-  min: 0
-  max: 49.0408
+  IndexesOfLandMarks: 1500000027000000
+  BlendValue: 0.20493975
+  BlendValueAngle: 102.52881
+  min: 14.866069
+  max: 29.614185
   InitialCalibration: 0
-  blendConstrainerName: Right Lip Hieght
-  BlendContrainer: {fileID: 0}

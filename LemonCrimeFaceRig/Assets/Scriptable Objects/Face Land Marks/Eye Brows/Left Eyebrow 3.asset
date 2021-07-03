@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Mouth Lower Lip Height
+  m_Name: Left Eyebrow 3
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 3400000038000000
-  BlendValue: 0.24145193
-  BlendValueAngle: 94.398705
-  min: 0
-  max: 54
+  IndexesOfLandMarks: 1a0000002d000000
+  BlendValue: 0.5522701
+  BlendValueAngle: 138.41095
+  min: 19.209373
+  max: 31.400637
   InitialCalibration: 0

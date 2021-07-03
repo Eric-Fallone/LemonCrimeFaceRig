@@ -7,15 +7,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Smile Width
+  m_Name: TEST
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 3000000036000000
-  BlendtreeName: 
-  BlendValue: 0.8689918
-  min: 32.01562
-  max: 70.11419
+  IndexesOfLandMarks: 
+  BlendValue: 0
+  DeadBandMin: 0
+  DeadBandMax: 1
+  BlendValueAngle: 0
+  min: 0
+  max: 1
   InitialCalibration: 0
+  output: 0
+  isReversed: 0

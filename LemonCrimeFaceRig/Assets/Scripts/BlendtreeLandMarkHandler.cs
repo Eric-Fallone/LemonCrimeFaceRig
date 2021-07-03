@@ -7,19 +7,26 @@ using UnityEngine.Animations.Rigging;
 public class BlendtreeLandMarkHandler : ScriptableObject
 {
 	public bool DebugPrint = false;
-	public int[] IndexesOfLandMarks;
+	public int[] IndexesOfLandMarks = new int[2];
 
-	[SerializeField]
+	[SerializeField, Range(0,1) ]
 	private float BlendValue;
+	[Range(0, 1)]
+	public float DeadBandMin = 0;
+	[Range(0, 1)]
+	public float DeadBandMax = 1;
 	[SerializeField]
 	private float BlendValueAngle;
 
-	public float min;
-	public float max;
+	public float min = 0;
+	public float max = 1;
 	[SerializeField]
 	private bool InitialCalibration = false;
 
+	[SerializeField]
+	private float output;
 
+	public bool isReversed = false;
 
 	public void OnEnable()
 	{
@@ -50,6 +57,11 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 
 		float sign = (second.y < first.y) ? -1.0f : 1.0f;
 		BlendValueAngle = Vector2.Angle( LandMarkInfoProcesser.S.FaceAngle , (second - first)) *sign ;
+
+		if(isReversed == true)
+		{
+			BlendValue = 1 - BlendValue; 
+		}
 
 	}
 
@@ -84,7 +96,23 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 
 	public float getDistanceValue()
 	{
-		return BlendValue;
+		if (BlendValue < DeadBandMin )
+		{
+			output = 0;
+			return 0;
+		}
+		if (BlendValue > DeadBandMax)
+		{
+			output = 1;
+			return 1;
+		}
+		if ( (DeadBandMax ==0 && DeadBandMin == 0) || DeadBandMax-DeadBandMin ==0 )
+		{
+			output = 0;
+			return 0;
+		}
+		output = (BlendValue - DeadBandMin) / (DeadBandMax - DeadBandMin);
+		return (BlendValue - DeadBandMin)/(DeadBandMax - DeadBandMin);
 	}
 
 	public float getAngleValue()

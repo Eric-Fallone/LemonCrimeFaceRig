@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Left Eye Brow
+  m_Name: MiddleMouth
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 150000002a000000
-  BlendValue: 0.34480727
-  BlendValueAngle: 18.113667
-  min: 31.622776
-  max: 45
+  IndexesOfLandMarks: 3300000039000000
+  BlendValue: 0.17292438
+  BlendValueAngle: 90.918495
+  min: 12.0415945
+  max: 66.0303
   InitialCalibration: 0
