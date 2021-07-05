@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FollowMouse : MonoBehaviour
 {
+	public float offSetFromMainCamera;
 
 	Camera cam;
 	private Vector3 mousePosition;
 	private Vector3 targetPosition;
-	public float moveSpeed = 0.1f;
+	
+
 
 	void Start()
 	{
@@ -20,7 +22,7 @@ public class FollowMouse : MonoBehaviour
 	{
 			mousePosition = Input.mousePosition;
 			//mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			targetPosition = cam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, -10));
+			targetPosition = cam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, offSetFromMainCamera));
 			this.transform.position = targetPosition;
 	}
 }

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugPrint: 0
   IndexesOfLandMarks: 320000003a000000
-  BlendValue: 0.037248548
+  BlendValue: 0.063776106
   DeadBandMin: 0
   DeadBandMax: 1
-  BlendValueAngle: 86.767456
-  min: 16.03122
-  max: 49.09175
+  BlendValueAngle: 83.45371
+  min: 10
+  max: 42.0119
   InitialCalibration: 0
-  output: 0.037248548
+  output: 0.063776106
   isReversed: 0

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Mouth Left 1
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 3400000041000000
-  BlendValue: 0.031031173
+  IndexesOfLandMarks: 3400000038000000
+  BlendValue: 0.030792603
   DeadBandMin: 0
   DeadBandMax: 1
-  BlendValueAngle: 83.8845
-  min: 7.071068
-  max: 39.012817
+  BlendValueAngle: 78.69007
+  min: 11.045361
+  max: 42.047592
   InitialCalibration: 0
-  output: 0.031031173
+  output: 0.030792603
   isReversed: 0

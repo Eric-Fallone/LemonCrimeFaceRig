@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ca5e0114b3149b48b3c4a31daa11788, type: 3}
-  m_Name: Mouht Right 2
+  m_Name: Mouth Right 2
   m_EditorClassIdentifier: 
   DebugPrint: 0
   IndexesOfLandMarks: 310000003b000000
-  BlendValue: 0.038177904
+  BlendValue: 0.08406547
   DeadBandMin: 0
   DeadBandMax: 1
-  BlendValueAngle: 81.95391
-  min: 10.049875
-  max: 36.124783
+  BlendValueAngle: 78.69007
+  min: 7.071068
+  max: 30.016663
   InitialCalibration: 0
-  output: 0.038177904
+  output: 0.08406547
   isReversed: 0

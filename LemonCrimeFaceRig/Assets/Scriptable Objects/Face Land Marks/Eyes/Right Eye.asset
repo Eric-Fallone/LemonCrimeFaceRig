@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Right Eye
   m_EditorClassIdentifier: 
   DebugPrint: 0
-  IndexesOfLandMarks: 2c00000028000000
-  BlendValue: 0.59491885
-  DeadBandMin: 0.125
-  DeadBandMax: 0.7
-  BlendValueAngle: 164.81798
-  min: 57.00877
-  max: 62.008064
+  IndexesOfLandMarks: 2500000029000000
+  BlendValue: 0
+  DeadBandMin: 0
+  DeadBandMax: 1
+  BlendValueAngle: 85.81509
+  min: 5
+  max: 7.0827627
   InitialCalibration: 0
-  output: 0.8172502
+  output: 0
   isReversed: 1
