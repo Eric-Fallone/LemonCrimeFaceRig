@@ -24,7 +24,7 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 	private bool InitialCalibration = false;
 
 	[SerializeField]
-	private float output;
+	private float trueOutput;
 
 	public bool isReversed = false;
 
@@ -63,6 +63,23 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 			BlendValue = 1 - BlendValue; 
 		}
 
+		if (BlendValue < DeadBandMin)
+		{
+			trueOutput = 0;
+			
+		}
+		if (BlendValue > DeadBandMax)
+		{
+			trueOutput = 1;
+			
+		}
+		if ((DeadBandMax == 0 && DeadBandMin == 0) || DeadBandMax - DeadBandMin == 0)
+		{
+			trueOutput = 0;
+			
+		}
+		trueOutput = (BlendValue - DeadBandMin) / (DeadBandMax - DeadBandMin);
+
 	}
 
 	public void StartCalibrating()
@@ -96,23 +113,7 @@ public class BlendtreeLandMarkHandler : ScriptableObject
 
 	public float getDistanceValue()
 	{
-		if (BlendValue < DeadBandMin )
-		{
-			output = 0;
-			return 0;
-		}
-		if (BlendValue > DeadBandMax)
-		{
-			output = 1;
-			return 1;
-		}
-		if ( (DeadBandMax ==0 && DeadBandMin == 0) || DeadBandMax-DeadBandMin ==0 )
-		{
-			output = 0;
-			return 0;
-		}
-		output = (BlendValue - DeadBandMin) / (DeadBandMax - DeadBandMin);
-		return (BlendValue - DeadBandMin)/(DeadBandMax - DeadBandMin);
+		return trueOutput;
 	}
 
 	public float getAngleValue()

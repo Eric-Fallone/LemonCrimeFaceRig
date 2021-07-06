@@ -45,6 +45,6 @@ while True:
     message = socket.recv()
     print("Received request: %s" % message)
     out_json = GetFaceLandMarks()
-    time.sleep(.1)
+    time.sleep(.05)
     
     socket.send_json(out_json)

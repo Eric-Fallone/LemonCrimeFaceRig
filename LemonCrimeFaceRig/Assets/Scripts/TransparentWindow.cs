@@ -48,7 +48,7 @@ public class TransparentWindow : MonoBehaviour
 
 		SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
 
-		SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
+		//SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
 #endif
 	}
 }
