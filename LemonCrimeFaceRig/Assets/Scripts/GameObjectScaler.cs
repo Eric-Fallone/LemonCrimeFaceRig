@@ -13,11 +13,7 @@ public class GameObjectScaler : MonoBehaviour
 	public void SetScale()
 	{
 		string decimalString = scaleInput.text;
-		Debug.Log(decimalString);
-		//float value = float.Parse(decimalString, NumberStyles.Any, CultureInfo.CurrentCulture);
 		float value = float.Parse(decimalString, NumberStyles.Any, new CultureInfo("en-US"));
-
-		Debug.Log("value");
 
 		this.transform.localScale =  new Vector3(value, value, value);
 	}

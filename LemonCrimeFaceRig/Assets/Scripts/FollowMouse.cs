@@ -9,7 +9,8 @@ public class FollowMouse : MonoBehaviour
 	Camera cam;
 	private Vector3 mousePosition;
 	private Vector3 targetPosition;
-	
+
+	public bool StopMovingOnCLick = false;
 
 
 	void Start()
@@ -20,9 +21,15 @@ public class FollowMouse : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-			mousePosition = Input.mousePosition;
-			//mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			targetPosition = cam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, offSetFromMainCamera));
-			this.transform.position = targetPosition;
+		mousePosition = Input.mousePosition;
+		//mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+		targetPosition = cam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, offSetFromMainCamera));
+		this.transform.position = targetPosition;
+
+		if (StopMovingOnCLick == true && Input.GetMouseButtonDown(0) == true)
+		{
+			this.enabled = false;
+			Saver.S.SaveLocation(this.gameObject);
+		}
 	}
 }
