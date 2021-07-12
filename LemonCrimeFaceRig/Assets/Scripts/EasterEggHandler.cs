@@ -14,7 +14,6 @@ public class EasterEggHandler : MonoBehaviour
 	public LookAtTransform LeftEye;
 	public LookAtTransform RightEye;
 
-
 	// Update is called once per frame
 	void Update()
     {
