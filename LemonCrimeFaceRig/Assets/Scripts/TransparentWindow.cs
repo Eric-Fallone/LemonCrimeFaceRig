@@ -43,11 +43,14 @@ public class TransparentWindow : MonoBehaviour
 #if !UNITY_EDITOR
 		IntPtr hWnd = GetActiveWindow();
 
+		//transparent background
 		MARGINS margins = new MARGINS { cxLeftWidth = -1 };
 		DwmExtendFrameIntoClientArea(hWnd, ref margins);
 
-		SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
+		//click through 
+		//SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
 
+		//always on top
 		//SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
 #endif
 	}

@@ -22,9 +22,6 @@ public class LandMarkInfoProcesser : MonoBehaviour
 	[SerializeField]
 	private bool isCalibrating = false;
 
-	[SerializeField]
-	private bool isDebug = false;
-
 	public ObjectMover LemonCrime;
 
 	public GameObject[] LandMarkDebuggers;

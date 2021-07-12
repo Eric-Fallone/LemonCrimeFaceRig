@@ -58,23 +58,25 @@ public class Saver : MonoBehaviour
 
 	public void LoadGameObjects()
 	{
+
 		//face locations
 		Vector3 tempLoc = new Vector3(
-			PlayerPrefs.GetFloat(Face.name + "LocX"),
-			PlayerPrefs.GetFloat(Face.name + "LocY"),
-			PlayerPrefs.GetFloat(Face.name + "LocS") );
+			PlayerPrefs.GetFloat(Face.name + "LocX",0),
+			PlayerPrefs.GetFloat(Face.name + "LocY",0),
+			PlayerPrefs.GetFloat(Face.name + "LocS",0) );
 
 		Face.transform.position = tempLoc;
 
 		//face scale
-		float faceScale = PlayerPrefs.GetFloat(Face.name+"Scale");
+		float faceScale = PlayerPrefs.GetFloat(Face.name+"Scale",1);
+		
 		Face.transform.localScale = new Vector3(faceScale,faceScale,faceScale);
 
-		float mouseScale = PlayerPrefs.GetFloat(Slice.name + "Scale");
+		float mouseScale = PlayerPrefs.GetFloat(Slice.name + "Scale",.2f);
 		Slice.transform.localScale = new Vector3(mouseScale, mouseScale, mouseScale);
 
 		// is mouse showing
-		int isMouseShowingHelper = PlayerPrefs.GetInt(Slice.name + "IsShowing");
+		int isMouseShowingHelper = PlayerPrefs.GetInt(Slice.name + "IsShowing",0);
 		if (isMouseShowingHelper == 0)
 		{
 			Slice.SetActive(false);

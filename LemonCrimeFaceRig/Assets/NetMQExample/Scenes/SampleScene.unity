@@ -2922,7 +2922,6 @@ MonoBehaviour:
   FaceLocation: {x: 0, y: 0}
   FaceAngle: {x: 0, y: 0}
   isCalibrating: 0
-  isDebug: 0
   LemonCrime: {fileID: 434820761}
   LandMarkDebuggers: []
 --- !u!4 &1365552449
@@ -2952,12 +2951,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 239849852}
-  x: 0
-  y: 0
-  screenX: 0
-  ScreenY: 0
   MaximumAngles: {x: 30, y: 30}
   power: 7
+  MuckTime: 2.5
+  MuckAngles: {x: -7.7, y: 31.6}
 --- !u!114 &1439615102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3209,6 +3206,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488582795}
   m_CullTransparentMesh: 1
+--- !u!1 &1508571786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508571788}
+  - component: {fileID: 1508571787}
+  m_Layer: 0
+  m_Name: Easter Egg Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1508571787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508571786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1a45bbf798c544988a6ab4a46faf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeEasterEggs: 
+  LeftEye: {fileID: 5837603203670746013}
+  RightEye: {fileID: 1369943594}
+--- !u!4 &1508571788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508571786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1542145465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7449,12 +7492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 239849852}
-  x: 0
-  y: 0
-  screenX: 0
-  ScreenY: 0
   MaximumAngles: {x: 30, y: 30}
   power: 7
+  MuckTime: 2.5
+  MuckAngles: {x: 33.98, y: -40.41}
 --- !u!4 &5842244826950666731
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ context = zmq.Context()
 socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
 
+print("Starting Face Detection")
+
 def GetFaceLandMarks():
     _, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -43,7 +45,7 @@ while True:
     GetFaceLandMarks()
     #  Wait for next request from client
     message = socket.recv()
-    print("Received request: %s" % message)
+    # print("Received request: %s" % message)
     out_json = GetFaceLandMarks()
     time.sleep(.05)
     
